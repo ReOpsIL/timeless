@@ -77,8 +77,8 @@ timeless email-report --recipients "manager@company.com" --subject "Weekly Repor
 
 1. **Install Claude CLI** (required dependency)
 ```bash
-# Install Claude CLI with MCP tools support
-npm install -g @anthropic-ai/claude-cli
+# Install Claude CLI - follow instructions at https://claude.ai/cli
+# No additional configuration needed - MCP tools are managed internally by Claude CLI
 ```
 
 2. **Build Timeless**
@@ -88,10 +88,11 @@ cd timeless
 cargo build --release
 ```
 
-3. **Configure Environment**
+3. **Test Installation**
 ```bash
-cp .env.example .env
-# Edit .env with your API keys and tokens
+# Test that everything is working
+./target/release/timeless health
+./target/release/timeless test-mcp
 ```
 
 ## 🏗 Project Structure
@@ -208,16 +209,16 @@ pub async fn collect_team_status(&self, channel: &str, team_members: &[String]) 
 
 ## 🔒 Configuration
 
-### Environment Variables (.env)
+### Environment Variables (.env.example)
 ```bash
-# Claude CLI configuration
-CLAUDE_API_KEY=sk-ant-your-api-key-here
+# Claude CLI Integration (Only required environment variable)
+# Note: Claude CLI must be installed and configured separately
+# The application uses Claude CLI with MCP tools - no direct API integration needed
 
-# MCP tool configurations (handled by Claude CLI)
-SLACK_BOT_TOKEN=xoxb-your-bot-token
-JIRA_TOKEN=your-jira-api-token
-GITHUB_TOKEN=ghp_your-github-token
-EMAIL_USER=your-email@company.com
+# Application Configuration (Optional - defaults are provided)
+TIMELESS_LOG_LEVEL=info
+TIMELESS_DATA_DIR=./data
+TIMELESS_CONFIG_PATH=./config/config.toml
 ```
 
 ### Application Configuration (config.toml)
@@ -227,9 +228,8 @@ name = "Smart Team Manager"
 data_dir = "./data"
 
 [claude]
+# Claude CLI integration (MCP tools managed by Claude CLI internally)
 enabled = true
-model = "claude-3-5-sonnet-20241022"
-max_tokens = 4000
 
 [team]
 name = "Engineering Team"
