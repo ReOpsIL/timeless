@@ -2,11 +2,9 @@ use anyhow::Result;
 use std::path::Path;
 
 pub mod json_store;
-pub mod backup;
 pub mod repository;
 
 pub use json_store::JsonStore;
-pub use backup::BackupManager;
 pub use repository::TeamRepository;
 
 pub trait Storage {

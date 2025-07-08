@@ -38,10 +38,7 @@ pub struct ClaudeConfig {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct StorageConfig {
-    pub backup_enabled: bool,
-    pub backup_interval: String,
-    pub max_backups: u32,
-    pub compression: bool,
+    pub data_format: String,
 }
 
 impl Default for Config {
@@ -72,10 +69,7 @@ impl Default for Config {
                 enabled: true,
             },
             storage: StorageConfig {
-                backup_enabled: true,
-                backup_interval: "daily".to_string(),
-                max_backups: 7,
-                compression: true,
+                data_format: "json".to_string(),
             },
         }
     }

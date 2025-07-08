@@ -16,7 +16,4 @@ enabled = true
 
 
 [storage]
-backup_enabled = true
-backup_interval = "daily"
-max_backups = 7
-compression = true
+data_format = "json"
