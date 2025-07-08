@@ -9,11 +9,11 @@ An intelligent, prompt-driven team management platform powered by Claude CLI tha
 ### Key Innovation: Prompt-Based Service Interactions
 
 ```
-┌─────────────────┐    Natural Language    ┌─────────────────┐    MCP Tools    ┌─────────────────┐
-│   Timeless CLI  │ ────────prompts───────► │   Claude CLI    │ ──────────────► │ External Services│
+┌─────────────────┐    Natural Language    ┌─────────────────┐    MCP Tools   ┌──────────────────┐
+│   Timeless CLI  │ ────────prompts──────► │   Claude CLI    │ ─────────────► │ External Services│
 │                 │                        │                 │                │ (Jira, Slack,    │
-│                 │ ◄──────responses────── │                 │ ◄────────────── │  GitHub, Email)  │
-└─────────────────┘                        └─────────────────┘                └─────────────────┘
+│                 │ ◄──────responses────── │                 │ ◄───────────── │  GitHub, Email)  │
+└─────────────────┘                        └─────────────────┘                └──────────────────┘
 ```
 
 ## ✨ Benefits
