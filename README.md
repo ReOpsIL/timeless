@@ -1,5 +1,7 @@
 # Timeless - Smart Team Manager Tool
 
+![Timeless](timeless.jpg)
+
 An intelligent, prompt-driven team management platform powered by Claude CLI that uses natural language to interact with external services via MCP tools.
 
 ## 🚀 Architecture Overview
