@@ -1,0 +1,23 @@
+{
+  "items": {
+    "ae015087-7731-45d3-b278-79de531b90b3": {
+      "id": "ae015087-7731-45d3-b278-79de531b90b3",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "slack_id": "@john.doe",
+      "role": "Software Engineer",
+      "created_at": "2025-07-07T19:18:16.914174Z",
+      "updated_at": "2025-07-07T19:18:16.914339Z"
+    },
+    "8839a0f1-d6bc-49c7-9c32-a7d6becdd9b2": {
+      "id": "8839a0f1-d6bc-49c7-9c32-a7d6becdd9b2",
+      "name": "Alice Smith",
+      "email": "alice@example.com",
+      "slack_id": "@alice",
+      "role": "Team Member",
+      "created_at": "2025-07-07T19:19:05.907479Z",
+      "updated_at": "2025-07-07T19:19:05.907538Z"
+    }
+  },
+  "last_updated": "2025-07-07T19:19:05.908006Z"
+}

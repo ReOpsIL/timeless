@@ -1,0 +1,13 @@
+{
+  "items": {
+    "2e1176f2-ff16-4f6a-815a-4b988f95f904": {
+      "id": "2e1176f2-ff16-4f6a-815a-4b988f95f904",
+      "name": "Team Management Tool",
+      "description": "AI-powered team management platform",
+      "status": "Active",
+      "created_at": "2025-07-07T19:18:16.915222Z",
+      "updated_at": "2025-07-07T19:18:16.915222Z"
+    }
+  },
+  "last_updated": "2025-07-07T19:18:16.915258Z"
+}

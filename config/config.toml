@@ -1,0 +1,57 @@
+[app]
+name = "Smart Team Manager"
+version = "0.1.0"
+data_dir = "./data"
+log_level = "info"
+
+[team]
+name = "Engineering Team"
+timezone = "UTC"
+working_hours = { start = "09:00", end = "17:00" }
+working_days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+[claude]
+enabled = true
+model = "claude-3-5-sonnet-20241022"
+max_tokens = 4000
+temperature = 0.7
+api_key_env = "CLAUDE_API_KEY"
+
+[mcp]
+enabled = true
+timeout = 30
+retry_attempts = 3
+
+[mcp.servers.slack]
+command = "npx"
+args = ["@modelcontextprotocol/server-slack"]
+working_dir = "."
+
+[mcp.servers.slack.env]
+SLACK_BOT_TOKEN = "${SLACK_BOT_TOKEN}"
+SLACK_APP_TOKEN = "${SLACK_APP_TOKEN}"
+
+[mcp.servers.github]
+command = "npx"
+args = ["@modelcontextprotocol/server-github"]
+
+[mcp.servers.github.env]
+GITHUB_PERSONAL_ACCESS_TOKEN = "${GITHUB_TOKEN}"
+
+[mcp.servers.jira]
+command = "npx"
+args = ["@modelcontextprotocol/server-atlassian"]
+
+[mcp.servers.jira.env]
+ATLASSIAN_API_TOKEN = "${JIRA_TOKEN}"
+ATLASSIAN_DOMAIN = "${JIRA_DOMAIN}"
+
+[workflows]
+daily_status = { enabled = true, schedule = "0 9 * * MON-FRI" }
+weekly_report = { enabled = true, schedule = "0 17 * * FRI" }
+
+[storage]
+backup_enabled = true
+backup_interval = "daily"
+max_backups = 7
+compression = true

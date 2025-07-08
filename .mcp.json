@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "git": {
+      "command": "python3",
+      "args": [
+        "-m",
+        "mcp_server_git",
+        "--repository",
+        "."
+      ]
+    },
+    "atlassian": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.atlassian.com/v1/sse"
+      ]
+    }
+  }
+}

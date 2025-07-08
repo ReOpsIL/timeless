@@ -1,0 +1,14 @@
+{
+  "items": {
+    "386bf16e-cf6a-47f1-b5b4-8fbfc74dcd6b": {
+      "id": "386bf16e-cf6a-47f1-b5b4-8fbfc74dcd6b",
+      "date": "2025-07-07T19:18:16.915933Z",
+      "active_members": 1,
+      "completed_tasks": 2,
+      "blockers_count": 0,
+      "average_satisfaction": 8.5,
+      "velocity": 75.0
+    }
+  },
+  "last_updated": "2025-07-07T19:18:16.915959Z"
+}
